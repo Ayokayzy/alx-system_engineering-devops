@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# a Bash script that displays the PID, along with the process name,
+# of processes whose name contain the word bash.
+
+var=$(pgrep -f bash)
+
+for nm in $var
+do
+	echo "$nm bash"
+done
