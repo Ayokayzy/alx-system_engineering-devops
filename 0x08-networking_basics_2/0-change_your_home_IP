@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+if [[ $EUID -ne 0 ]]
+then
+	echo "This script must be run as root. Exiting..."
+	exit 1
+fi
+
+hosts_file="/etc/hosts"
+hosts_file_backup="/etc/hosts.dup"
+
+#create a backup
+cp $hosts_file $hosts_file_backup
+
+facebook_mapping="8.8.8.8\tfacebook.com"
+localhost_mapping="127.0.0.2\tlocalhost"
+
+# Add or modify entries in the hosts file
+if grep -q "localhost" $hosts_file; then
+    sed -i "s/^127.0.0.1.*/$localhost_mapping/" $hosts_file
+else
+    echo -e $localhost_mapping >> $hosts_file
+fi
+
+if grep -q "facebook.com" $hosts_file; then
+    sed -i "s/^.*facebook.com.*/$facebook_mapping/" $hosts_file
+else
+    echo -e $facebook_mapping >> $hosts_file
+fi
