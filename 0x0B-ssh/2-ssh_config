@@ -1,0 +1,4 @@
+Host myserver
+    IdentifyFile ~/.ssh/school
+    User ubuntu
+    Hostname 18.204.15.87
