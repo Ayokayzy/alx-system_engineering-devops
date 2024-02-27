@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # a Bash script that configures a new Ubuntu machine
-
 sudo apt-get -y update
 sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
 sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
 service nginx start
