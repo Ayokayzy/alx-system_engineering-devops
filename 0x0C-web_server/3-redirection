@@ -5,5 +5,5 @@ apt-get update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
-sed -i "/location \/{*}/a $new_config" /etc/nginx/sites-enabled/default
+sed -i "/location \/{.*}/a $new_config" /etc/nginx/sites-enabled/default
 service nginx start
