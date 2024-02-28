@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# a Bash script that configures a new Ubuntu machine
+new_config="location \/ {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
+apt-get update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo "Hello World!" > /var/www/html/index.html
+sed -i "/location \/{*}/a $new_config" /etc/nginx/sites-enabled/default
+service nginx start
