@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Configure Nginx so that its HTTP response contains a custom header
+# shellcheck disable=SC2059
+
+str="		add_header X-Served-By: $HOSTNAME"
+sed -i "/http {/a  $str" /sys/nginx/nginx.conf
+service nginx restart

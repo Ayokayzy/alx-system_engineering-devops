@@ -1,0 +1,17 @@
+http {
+add_header X-Served-By: ubuntu-focal
+add_header X-Served-By: 03-web-01;
+add_header X-Served-By: 03-web-01;
+add_header X-Served-By: 03-web-01
+add_header X-Served-By: 03-web-01
+add_header X-Served-By: 03-web-01
+'$	'add_header X-Served-By: 03-web-01
+$str
+n    add_header X-Served-By: 03-web-01
+add_header X-Served-By: 03-web-01
+add_header X-Served-By: 03-web-01
+/    add_header X-Served-By: 03-web-01
+	##
+	#
+	##
+}
