@@ -3,5 +3,5 @@
 # shellcheck disable=SC2059
 
 str="		add_header X-Served-By: $HOSTNAME"
-sed -i "/http {/a  $str" /sys/nginx/nginx.conf
+sed -i "/http {/a  $str" /etc/nginx/nginx.conf
 service nginx restart
