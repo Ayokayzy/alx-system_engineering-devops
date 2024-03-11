@@ -37,6 +37,7 @@ backend ayokayzy-backend
         server web-01 18.204.15.87:80 check
         server web-02 54.165.31.195:80 check
 "
+mv /etc/haproxy/haproxy.cfg{,.original}
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
 # enable haproxy to be started by init script
