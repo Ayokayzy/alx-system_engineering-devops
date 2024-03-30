@@ -1,4 +1,2 @@
 #!/usr/bin/env bash
-docker exec -it f17fcb5d10c3 /bin/bash
-apt-get install -y apache2
 service apache2 start
