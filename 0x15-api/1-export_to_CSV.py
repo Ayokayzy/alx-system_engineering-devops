@@ -2,9 +2,9 @@
 """
 1-export_to_CSV.py
 """
+import csv
 import requests
 from sys import argv
-import csv
 
 
 if __name__ == "__main__":
@@ -18,7 +18,7 @@ if __name__ == "__main__":
         f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
     )
     tasks = todos.json()
-
+Export to CSV
     with open(f'{employee_id}.csv', 'w') as file:
         writer = csv.writer(file, dialect="unix", delimiter=",")
         for task in tasks:
