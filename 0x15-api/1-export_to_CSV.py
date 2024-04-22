@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-0-gather_data_from_an_API.py
+1-export_to_CSV.py
 """
 import requests
 from sys import argv
+import csv
 
 
 if __name__ == "__main__":
@@ -17,14 +18,9 @@ if __name__ == "__main__":
         f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
     )
     tasks = todos.json()
-    completed_tasks = [
-        task for task in tasks
-        if task['completed']
-    ]
-    print(
-        f"Employee {user['name']} is done with \
-tasks({len(completed_tasks)}/{len(tasks)}):"
-    )
 
-    for task in completed_tasks:
-        print("\t {}".format(task['title']))
+    with open('./2.csv', 'w') as file:
+        writer = csv.writer(file, dialect="unix", delimiter=",")
+        for task in tasks:
+            row = [employee_id, user['name'], task['completed'], task['title']]
+            writer.writerow(row)
