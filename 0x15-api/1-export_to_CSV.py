@@ -19,7 +19,7 @@ if __name__ == "__main__":
     )
     tasks = todos.json()
 
-    with open('./2.csv', 'w') as file:
+    with open(f'{employee_id}.csv', 'w') as file:
         writer = csv.writer(file, dialect="unix", delimiter=",")
         for task in tasks:
             row = [employee_id, user['name'], task['completed'], task['title']]
