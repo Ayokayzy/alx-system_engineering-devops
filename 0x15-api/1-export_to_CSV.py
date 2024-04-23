@@ -22,5 +22,10 @@ if __name__ == "__main__":
     with open(f'{employee_id}.csv', 'w') as file:
         writer = csv.writer(file, dialect="unix", delimiter=",")
         for task in tasks:
-            row = [task['userId'], user['username'], task['completed'], task['title']]
+            row = [
+                task['userId'],
+                user['username'],
+                task['completed'],
+                task['title']
+            ]
             writer.writerow(row)
