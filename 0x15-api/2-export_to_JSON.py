@@ -2,9 +2,9 @@
 """
 0-gather_data_from_an_API.py
 """
+import json
 import requests
 from sys import argv
-import json
 
 
 if __name__ == "__main__":
@@ -15,13 +15,13 @@ if __name__ == "__main__":
     )
     user = users.json()
     todos = requests.get(
-        f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
+        f"https://jsonplaceholder.typicode.com/users/{user['id']}/todos"
     )
     tasks = todos.json()
 
     data = []
     for task in tasks:
-        user_id = user['id']
+        user_id = task['userId']
         task_title = task['title']
         task_status = task['completed']
         username = user['username']
