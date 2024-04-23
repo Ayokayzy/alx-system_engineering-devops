@@ -14,6 +14,7 @@ if __name__ == "__main__":
         f"https://jsonplaceholder.typicode.com/users/{employee_id}"
     )
     user = users.json()
+
     todos = requests.get(
         f"https://jsonplaceholder.typicode.com/users/{user['id']}/todos"
     )
