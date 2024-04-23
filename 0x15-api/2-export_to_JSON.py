@@ -31,6 +31,6 @@ if __name__ == "__main__":
             'username': username
         }
         data.append(myobj)
-    obj = { user_id: data }
+    obj = {user_id: data}
     with open(f"{user['id']}.json", 'w') as file:
         json.dump(obj, file)
