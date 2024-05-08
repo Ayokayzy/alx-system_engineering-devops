@@ -24,12 +24,16 @@ def number_of_subscribers(subreddit):
     }
     base_url = "https://www.reddit.com/"
     try:
-        r = requests.get(f"{base_url}r/{subreddit}/about/.json", headers=header, allow_redirects=False)
+        r = requests.get(
+            f"{base_url}r/{subreddit}/about/.json",
+            headers=header,
+            allow_redirects=False
+        )
         if r.status_code == 200:
             jsonData = r.json()
             subs = jsonData['data']['subscribers']
             return subs
         else:
-           return 0
+            return 0
     except Exception as e:
         print(e)
