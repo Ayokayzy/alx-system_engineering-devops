@@ -1,4 +1,4 @@
-![Escalation Procedure](https://twitter.com/i/status/1656470462866546688)
+![Escalation Procedure](https://i.imgflip.com/saa2g.jpg)
 
 ## Issue Summary:
 
