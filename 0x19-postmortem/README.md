@@ -24,13 +24,13 @@
 ## Corrective and Preventative Measures:
 
 * **Improvements/Fixes:**
-* Implement automated memory usage monitoring and alerting.
-* Conduct thorough code reviews to catch memory management issues early.
-* Enhance testing procedures to include performance and resource utilization metrics.
+	* Implement automated memory usage monitoring and alerting.
+	* Conduct thorough code reviews to catch memory management issues early.
+	* Enhance testing procedures to include performance and resource utilization metrics.
 * **Tasks to Address the Issue:**
-* Conduct a comprehensive review of recent code deployments for potential memory leaks.
-* Implement automated regression tests specifically targeting memory management.
-* Schedule regular performance audits to identify and address resource utilization issues proactively.
+	* Conduct a comprehensive review of recent code deployments for potential memory leaks.
+	* Implement automated regression tests specifically targeting memory management.
+	* Schedule regular performance audits to identify and address resource utilization issues proactively.
 
 ## Conclusion:
 
